@@ -1,0 +1,23 @@
+server:
+  port: 9099
+  servlet:
+    contextPath: /timezone
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/timesheet_db
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    defer-datasource-initialization: true
+    show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
